@@ -4,7 +4,10 @@
     var hour = moment().hours();
     var currentTime = parseInt($(this).attr("id"));
 
-    //store information
+    //save button
+    var saveBtn = $(".saveBtn");
+    
+    
     
 
 
@@ -37,13 +40,42 @@
 
     };
 
-    //Click Time Block to Enter Event
+    //Click Time Block to Enter Event - via <text area> in HTML
 
-    //Click Save Button to Save Time Block (Text is saved in local storage)
+    //saveBtn - Click Save Button to Save Time Block Event (Text is saved in local storage)
 
-    //Refresh Page and Saved Events are Still Displayed 
+    saveBtn.on("click", function(){
+
+        //information to be stored
+        var time = $(this).siblings(".hour").text();
+        var eventDescription =$(this).siblings(".description").val();
+
+        //save time and event into local storage
+        localStorage.setItem(time, eventDescription);
+
+    })
+
+  
+
+    //storeEvent Function - Refresh Page and Saved Events are Still Displayed 
+    function storeEvent() {
+
+        $(".hour").each(function(){
+            var currentTime = $(this).text();
+            var savedEvent = localStorage.getItem(currentTime);
+
+            //show value if saved event found
+            if (savedEvent !== null) {
+                $(this).siblings(".description").val(savedEvent);
+            }
+        })
+
+    }
 
 //ACTIONS
 
     //Color Blocks
     colorCode();
+
+    //Event Loacal Store
+    storeEvent();
