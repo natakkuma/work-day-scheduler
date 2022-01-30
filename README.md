@@ -13,6 +13,7 @@ A daily planner that can be used to create a work day schedule.
 https://natakkuma.github.io/work-day-scheduler/
 
 <h2>Screenshot</h2>
+<img src="https://user-images.githubusercontent.com/95733427/151715838-b12e9a37-861d-4567-9c33-2ef6815ec391.png"/>
 
 
 <h2>Contribution</h2>
