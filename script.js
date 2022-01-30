@@ -9,7 +9,7 @@
     //Function - Display Current Day at Top
     $("#currentDay").text(moment().format('dddd, MMMM Do, YYYY'));
 
-    //Color-code Time Blocks based on Pasat, Present, Future
+    //Color-code Time Blocks based on Past, Present, Future
 
     //Click Time Block to Enter Event
 
