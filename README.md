@@ -1,4 +1,4 @@
-#Work Day Scheduler
+<h1>Work Day Scheduler</h1>
 
 <h2>Purpose</h2>
 A daily planner that can be used to create a work day schedule. 
