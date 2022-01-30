@@ -1,11 +1,11 @@
 //VARIABLES
 
-    //time
-    var hour = moment().hours();
-    var currentTime = parseInt($(this).attr("id"));
+    
 
     //save button
     var saveBtn = $(".saveBtn");
+
+    
     
     
     
@@ -21,13 +21,19 @@
 
         $(".time-block").each(function() {
 
+            //time
+            var hour = moment().hours();
+            var currentTime = parseInt($(this).attr("id"));
+
+
+            
             //if conditions - past, present, future
             //PRESENT
             if ( currentTime === hour) {
                 $(this).addClass("present");
             }
             //FUTURE
-            else if (currentTime < hour) {
+            else if (currentTime > hour) {
                 $(this).addClass("future");
             }
             //PAST
